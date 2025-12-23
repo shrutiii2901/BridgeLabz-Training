@@ -8,3 +8,4 @@ class Main {
         System.out.println("The area of the triangle is " + area + " square units");
     }
 }
+ 

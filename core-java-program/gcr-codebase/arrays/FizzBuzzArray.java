@@ -25,7 +25,6 @@ public class FizzBuzzArray {
                 result[i] = String.valueOf(i);
             }
         }
-
         for (int i = 1; i <= number; i++) {
             System.out.println("Position " + i + " = " + result[i]);
         }
