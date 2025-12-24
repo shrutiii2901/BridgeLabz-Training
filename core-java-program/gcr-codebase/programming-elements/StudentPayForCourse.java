@@ -1,4 +1,4 @@
-class Main {
+class StudentPayForCourse {
     public static void main(String[] args) {
         int fee = 125000;
         double discountPercent = 10;

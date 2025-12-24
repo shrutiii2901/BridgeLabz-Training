@@ -1,4 +1,5 @@
-class Main {
+
+public class VolumeOfEarth {
     public static void main(String[] args) {
         double rKm = 6378;
         double volumeKm = (4.0 / 3) * Math.PI * Math.pow(rKm, 3);

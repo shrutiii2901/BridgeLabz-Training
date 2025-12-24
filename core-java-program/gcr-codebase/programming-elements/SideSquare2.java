@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Main {
+public class SideSquare2{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

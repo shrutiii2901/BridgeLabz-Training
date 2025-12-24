@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class EmployeeBonus {
+class BonusOfEmployee2{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -9,9 +9,11 @@ class EmployeeBonus {
 
         if (yearsOfService > 5) {
             double bonus = salary * 0.05;
-            System.out.println("Bonus amount = " + bonus);
+            System.out.println("Bonus amount= " + bonus);
         } else {
             System.out.println("No bonus");
         }
     }
 }
+
+

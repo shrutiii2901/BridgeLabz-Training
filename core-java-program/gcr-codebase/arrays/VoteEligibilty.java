@@ -1,5 +1,5 @@
 import java.util.*;
-class Main {
+class VotingEligibilty {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         
@@ -13,12 +13,15 @@ class Main {
             
             if(studentAge[i]>=18){
                 System.out.println("The student with the age " + studentAge[i] + "can vote");
+
             }
             else if(studentAge[i]<18 && studentAge[i]>0){
                 System.out.println("The student with the age" + studentAge[i] + "cannot vote");
+
             }
             else if(studentAge[i]<0){
                 System.out.println("Invalid age");
+
             }
             
         }
