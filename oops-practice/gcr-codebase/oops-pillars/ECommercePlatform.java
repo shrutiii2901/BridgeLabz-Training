@@ -1,4 +1,4 @@
-// ECommercePlatform.java
+
 import java.util.*;
 
 abstract class Product {

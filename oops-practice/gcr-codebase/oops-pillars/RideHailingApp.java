@@ -1,4 +1,4 @@
-// RideHailingApp.java
+
 abstract class RideVehicle {
     protected String driverName;
     protected double ratePerKm;
