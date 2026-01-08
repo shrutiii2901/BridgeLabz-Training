@@ -1,13 +1,13 @@
 import java.util.*;
 
-// Exception Handling
+
 class NoDriverAvailableException extends Exception {
     public NoDriverAvailableException(String message) {
         super(message);
     }
 }
 
-// Entity: User
+
 class User {
     private String name;
     private int userId;
@@ -21,7 +21,7 @@ class User {
     public int getUserId() { return userId; }
 }
 
-// Entity: Driver
+//Driver
 class Driver {
     private String name;
     private int driverId;
@@ -37,7 +37,7 @@ class Driver {
     public String getName() { return name; }
 }
 
-// Entity: Ride
+// Ride
 class Ride {
     private User user;
     private Driver driver;
@@ -59,19 +59,19 @@ class Ride {
     }
 }
 
-// Interface: FareCalculator
+//  FareCalculator
 interface FareCalculator {
     double calculateFare(double distance);
 }
 
-// Polymorphism: Normal Pricing
+// Normal Pricing
 class NormalFareCalculator implements FareCalculator {
     public double calculateFare(double distance) {
         return distance * 10; // ₹10 per km
     }
 }
 
-// Polymorphism: Peak Pricing
+// Peak Pricing
 class PeakFareCalculator implements FareCalculator {
     public double calculateFare(double distance) {
         return distance * 15; // ₹15 per km during peak
@@ -112,7 +112,7 @@ class RideManager {
     }
 }
 
-// Test Class
+
 public class CarBooking {
     public static void main(String[] args) {
         try {
@@ -126,11 +126,11 @@ public class CarBooking {
             manager.addDriver(d1);
             manager.addDriver(d2);
 
-            // Normal fare ride
+            
             Ride ride1 = manager.bookRide(u1, 12, new NormalFareCalculator());
             System.out.println(ride1.getRideDetails());
 
-            // Peak fare ride
+            
             Ride ride2 = manager.bookRide(u2, 8, new PeakFareCalculator());
             System.out.println(ride2.getRideDetails());
 
