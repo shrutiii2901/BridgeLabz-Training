@@ -1,8 +1,10 @@
+import java.util.Scanner;
+
 class CircleSample {
     double radius;
 
     CircleSample() {
-        this(1.0); // constructor chaining
+        this(1.0);   //constructor chaining
     }
 
     CircleSample(double r) {
@@ -14,9 +16,20 @@ class CircleSample {
     }
 
     public static void main(String[] args) {
-        CircleSample c1 = new CircleSample();
-        CircleSample c2 = new CircleSample(5);
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter radius for first circle: ");
+        double r1 = sc.nextDouble();
+
+        System.out.print("Enter radius for second circle: ");
+        double r2 = sc.nextDouble();
+
+        CircleSample c1 = new CircleSample(r1);
+        CircleSample c2 = new CircleSample(r2);
+
         c1.area();
         c2.area();
+
+        sc.close();
     }
 }

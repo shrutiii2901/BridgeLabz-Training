@@ -1,34 +1,71 @@
+import java.util.Scanner;
+
+
 class HotelBooking {
+
+   
     String guestName;
     String roomType;
     int nights;
 
+    
     HotelBooking() {
         guestName = "Guest";
-        roomType = "Standard";
+        roomType = "Basic";
         nights = 1;
     }
 
-    HotelBooking(String g, String r, int n) {
-        guestName = g;
-        roomType = r;
-        nights = n;
+    
+    HotelBooking(String guestName, String roomType, int nights) {
+        this.guestName = guestName;
+        this.roomType = roomType;
+        this.nights = nights;
     }
 
-    HotelBooking(HotelBooking h) {
-        guestName = h.guestName;
-        roomType = h.roomType;
-        nights = h.nights;
+    
+    HotelBooking(HotelBooking hb) {
+        this.guestName = hb.guestName;
+        this.roomType = hb.roomType;
+        this.nights = hb.nights;
     }
 
-    void display() {
-        System.out.println(guestName + " | " + roomType + " | " + nights);
+    
+    void displayBooking() {
+        System.out.println("Guest Name: " + guestName);
+        System.out.println("Room Type: " + roomType);
+        System.out.println("Number of Nights: " + nights);
     }
 
+    
     public static void main(String[] args) {
-        HotelBooking h1 = new HotelBooking();
-        HotelBooking h2 = new HotelBooking("Amit", "Deluxe", 3);
-        HotelBooking h3 = new HotelBooking(h2);
-        h3.display();
+
+        Scanner sc = new Scanner(System.in);
+
+        
+        System.out.println("Default Booking:");
+        HotelBooking b1 = new HotelBooking();
+        b1.displayBooking();
+
+        
+        System.out.println("Enter guest name:");
+        String name = sc.nextLine();
+
+        System.out.println("Enter room type:");
+        String room = sc.nextLine();
+
+        System.out.println("Enter number of nights:");
+        int nights = sc.nextInt();
+
+        
+        System.out.println("User Booking:");
+        HotelBooking b2 = new HotelBooking(name, room, nights);
+        b2.displayBooking();
+
+        
+        System.out.println("Copied Booking:");
+        HotelBooking b3 = new HotelBooking(b2);
+        b3.displayBooking();
+
+        
     }
 }
