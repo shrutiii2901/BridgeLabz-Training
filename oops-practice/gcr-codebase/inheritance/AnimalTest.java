@@ -54,7 +54,7 @@ public class AnimalTest {
         };
 
         for (Animal a : animals) {
-            a.makeSound(); // Polymorphism
+            a.makeSound();
         }
     }
 }

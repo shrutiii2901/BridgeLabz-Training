@@ -1,34 +1,49 @@
-// Book class
-class Booker {
+
+class BankAccount {
 
     
-    String title;
-    String author;
-    double price;
+    String accountHolder;
+    String accountNumber;
+    double balance;
 
-    // method to display 
-    void displayDetails() {
-        System.out.println("Title of the book: " + title);
-        System.out.println("Author of the book: " + author);
-        System.out.println("Price of the book: " + price);
+    
+    void displayBalance() {
+        System.out.println("Current balance: " + balance);
+    }
+
+   
+    void deposit(double amount) {
+        balance = balance + amount;
+        System.out.println("Deposited: " + amount);
+        displayBalance();
+    }
+
+  
+    void withdraw(double amount) {
+        if (amount <= balance) {
+            balance = balance - amount;
+            System.out.println("Withdraw amount is : " + amount);
+            displayBalance();
+        } else {
+            System.out.println("Insufficient balance");
+        }
     }
 
     
     public static void main(String[] args) {
 
-        // first book 
-        Booker book1 = new Booker();
-        book1.title = "2States";
-        book1.author = "Chetan Bhagat";
-        book1.price = 500.0;
+        BankAccount acc = new BankAccount();
 
-        // second book 
-        Booker book2 = new Booker();
-        book2.title = "Wings Of Fire";
-        book2.author = "Abdul kalam.A.P.J";
-        book2.price = 500.0;
+        acc.accountHolder = "State of Chennai";
+        acc.accountNumber = "ACC001";
+        acc.balance = 700.0;
 
-        book1.displayDetails();
-        book2.displayDetails();
+        System.out.println("State of Chennai\n");
+
+        acc.displayBalance();
+        acc.deposit(200.0);
+        acc.withdraw(100.0);
+        
+        acc.withdraw(1000.0);   
     }
 }

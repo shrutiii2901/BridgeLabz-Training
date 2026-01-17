@@ -1,30 +1,35 @@
-// Employee class
+import java.util.Scanner;
+
 class Employee {
 
-    // attributes
     String name;
     int id;
     double salary;
 
-    // method to display employee details
     void displayDetails() {
         System.out.println("Employee Name: " + name);
-        System.out.println("Employee id: " + id);
+        System.out.println("Employee ID: " + id);
         System.out.println("Employee Salary: " + salary);
     }
 
-    // main method
     public static void main(String[] args) {
 
-        // creating object of Employee
+        Scanner sc = new Scanner(System.in);
+
         Employee emp = new Employee();
 
-        // assigning values
-        emp.name = "Rohan";
-        emp.id = 1;
-        emp.salary = 500000;
+        System.out.print("Enter Employee Name: ");
+        emp.name = sc.nextLine();
 
-        // calling display method
+        System.out.print("Enter Employee ID: ");
+        emp.id = sc.nextInt();
+
+        System.out.print("Enter Employee Salary: ");
+        emp.salary = sc.nextDouble();
+
+        System.out.println("\nEmployee Details:");
         emp.displayDetails();
+
+        sc.close();
     }
 }

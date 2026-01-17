@@ -1,42 +1,36 @@
-// MobilePhone class
+import java.util.Scanner;
+
 class MobilePhone {
 
-    
     String brand;
     String model;
     double price;
 
-    // method to display mobile details
     void displayDetails() {
         System.out.println("Brand of mobile: " + brand);
         System.out.println("Model of mobile: " + model);
         System.out.println("Price of mobile: " + price);
+    
     }
 
-    // main method
     public static void main(String[] args) {
 
-        // first mobile object
-        MobilePhone m1 = new MobilePhone();
-        m1.brand = "VIVO";
-        m1.model = "VIVO V29";
-        m1.price = 15999.0;
+        Scanner sc = new Scanner(System.in);
 
-        // second mobile object
-        MobilePhone m2 = new MobilePhone();
-        m2.brand = "ONE PLUS";
-        m2.model = "ONE PLUS nord4";
-        m2.price = 39999.0;
+        MobilePhone m = new MobilePhone();
 
-        // third mobile object
-        MobilePhone m3 = new MobilePhone();
-        m3.brand = "APPLE";
-        m3.model = "iphone pro16";
-        m3.price = 79999.0;
+        System.out.print("Enter Mobile Brand: ");
+        m.brand = sc.nextLine();
 
-        // display details
-        m1.displayDetails();
-        m2.displayDetails();
-        m3.displayDetails();
+        System.out.print("Enter Mobile Model: ");
+        m.model = sc.nextLine();
+
+        System.out.print("Enter Mobile Price: ");
+        m.price = sc.nextDouble();
+
+        System.out.println("\nEntered Mobile Details:");
+        m.displayDetails();
+
+        sc.close();
     }
 }

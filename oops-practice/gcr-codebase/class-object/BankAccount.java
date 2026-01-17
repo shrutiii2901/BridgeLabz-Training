@@ -1,49 +1,57 @@
-// BankAccount class
+import java.util.Scanner;
+
 class BankAccount {
 
-    // attributes
     String accountHolder;
     String accountNumber;
     double balance;
 
-    // method to display current balance
     void displayBalance() {
         System.out.println("Current balance: " + balance);
     }
 
-    // method to deposit money
     void deposit(double amount) {
         balance = balance + amount;
         System.out.println("Deposited: " + amount);
         displayBalance();
     }
 
-    // method to withdraw money
     void withdraw(double amount) {
         if (amount <= balance) {
             balance = balance - amount;
-            System.out.println("Withdraw amount is : " + amount);
+            System.out.println("Withdrawn: " + amount);
             displayBalance();
         } else {
             System.out.println("Insufficient balance");
         }
     }
 
-    // main method
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
 
         BankAccount acc = new BankAccount();
 
-        acc.accountHolder = "State of Chennai";
-        acc.accountNumber = "ACC001";
-        acc.balance = 700.0;
+        System.out.print("Enter Account Holder Name: ");
+        acc.accountHolder = sc.nextLine();
 
-        System.out.println("State of Chennai\n");
+        System.out.print("Enter Account Number: ");
+        acc.accountNumber = sc.nextLine();
 
+        System.out.print("Enter Initial Balance: ");
+        acc.balance = sc.nextDouble();
+
+        System.out.println("\nWelcome " + acc.accountHolder);
         acc.displayBalance();
-        acc.deposit(200.0);
-        acc.withdraw(100.0);
-        // insufficient balance case
-        acc.withdraw(1000.0);   
+
+        System.out.print("\nEnter amount to deposit: ");
+        double dep = sc.nextDouble();
+        acc.deposit(dep);
+
+        System.out.print("\nEnter amount to withdraw: ");
+        double wd = sc.nextDouble();
+        acc.withdraw(wd);
+
+        sc.close();
     }
 }

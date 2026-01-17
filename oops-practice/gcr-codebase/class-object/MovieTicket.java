@@ -1,16 +1,15 @@
-// MovieTicket class
+import java.util.Scanner;
+
 class MovieTicket {
 
-    // attributes
     String movieName;
     String seatNumber;
     double price;
     boolean isBooked = false;
 
-    // method to book ticket
     void bookTicket(String movie, String seat, double amount) {
 
-        if(!isBooked) {
+        if (!isBooked) {
             movieName = movie;
             seatNumber = seat;
             price = amount;
@@ -19,39 +18,45 @@ class MovieTicket {
             System.out.println("Ticket booked for movie: " + movieName);
             System.out.println("Seat Number: " + seatNumber);
         } else {
-            System.out.println("House full!!! sorry..... Ticket already booked");
+            System.out.println("House full");
         }
     }
 
-    // method to display ticket details
     void displayTicket() {
         if (isBooked) {
-            System.out.println("Price: $" + price);
+            System.out.println("Price:" + price);
             System.out.println();
             System.out.println("Ticket booked for movie: " + movieName);
             System.out.println("Seat Number: " + seatNumber);
-            System.out.println("Price: $" + price);
+            System.out.println("Price:" + price);
         } else {
             System.out.println("Ticket have not booked yet....");
         }
     }
 
-    // main method
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
         MovieTicket ticket = new MovieTicket();
 
-        // before booking
         ticket.displayTicket();
 
-        // first booking
-        ticket.bookTicket("Dragon", "A10", 120.0);
+        System.out.print("Enter Movie Name: ");
+        String movie = sc.nextLine();
 
-        // trying to book again
-        ticket.bookTicket("Dragon", "A10", 120.0);
-        ticket.bookTicket("Dragon", "A10", 120.0);
+        System.out.print("Enter Seat Number: ");
+        String seat = sc.nextLine();
 
-        // display final ticket details
+        System.out.print("Enter Ticket Price: ");
+        double amount = sc.nextDouble();
+
+        ticket.bookTicket(movie, seat, amount);
+
+        
+        ticket.bookTicket(movie, seat, amount);
+
         ticket.displayTicket();
+
+        sc.close();
     }
 }

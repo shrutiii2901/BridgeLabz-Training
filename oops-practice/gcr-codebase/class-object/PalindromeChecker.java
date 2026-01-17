@@ -1,13 +1,10 @@
-// PalindromeChecker class
+import java.util.Scanner;
+
 class PalindromeChecker {
 
-    // attribute
     String text;
 
-    // method to check palindrome
     boolean isPalindrome() {
-
-        // remove spaces and convert to lowercase
         String cleanText = text.replaceAll("\\s+", "").toLowerCase();
 
         int start = 0;
@@ -23,26 +20,25 @@ class PalindromeChecker {
         return true;
     }
 
-    // method to display result
     void displayResult() {
         if (isPalindrome()) {
-            System.out.println(text + " is palindrome");
+            System.out.println(text + " is a palindrome.");
         } else {
-            System.out.println(text + " is not Palindrome");
+            System.out.println(text + " is not a palindrome.");
         }
     }
 
-    // main method
     public static void main(String[] args) {
 
-        // first string
-        PalindromeChecker p1 = new PalindromeChecker();
-        p1.text = "A man a plan a canal Panama";
-        p1.displayResult();
+        Scanner sc = new Scanner(System.in);
 
-        // second string
-        PalindromeChecker p2 = new PalindromeChecker();
-        p2.text = "Hello";
-        p2.displayResult();
+        PalindromeChecker p = new PalindromeChecker();
+
+        System.out.print("Enter a string: ");
+        p.text = sc.nextLine();
+
+        p.displayResult();
+
+        sc.close();
     }
 }
