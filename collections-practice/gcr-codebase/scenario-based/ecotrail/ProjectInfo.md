@@ -1,221 +1,136 @@
-# 📘 Project Information Document  
-## EcoTrail – Hiking Data Analytics & Quality Evaluation System
+# 🌿 EcoTrail Analytics  
+### Java • Maven • JUnit 5 • SonarQube
+
+🚀 A mini analytics platform for managing hiking trail activity and evaluating **code quality** using SonarQube.
 
 ---
 
-## 1. Introduction
+## 📖 About the Project
+EcoTrail is a Java console application that stores and analyzes information about hiking trails across different regions.
 
-EcoTrail is a Java console-based system developed to simulate management and analytical processing of hiking trail information across multiple regions.
+The goal of the project is twofold:
 
-The application stores structured trail data and applies collection-driven operations to compute insights such as popularity, distribution across difficulty levels, and aggregated regional statistics.
-
-The project also integrates **unit testing** and **static code analysis** to demonstrate modern development practices followed in real-world software engineering.
-
----
-
-## 2. Problem Statement
-
-Hiking communities and tourism organizations often require a system to:
-
-- Track trail usage  
-- Identify popular routes  
-- Understand regional participation  
-- Compare difficulty trends  
-- Maintain reliable statistical information  
-
-EcoTrail provides a simplified prototype of such a system using in-memory data structures.
+1. Build collection-driven business logic.
+2. Measure reliability, maintainability, and test coverage through SonarQube.
 
 ---
 
-## 3. Objectives
-
-The major objectives of this project are:
-
-- Build modular Java classes following OOP principles  
-- Use Collections to store and manipulate data  
-- Implement analytics through grouping, sorting, and filtering  
-- Ensure correctness through JUnit tests  
-- Evaluate maintainability and reliability using SonarQube  
-
----
-
-## 4. System Architecture
-
-The system is divided into three logical layers.
-
-### 4.1 Model Layer
-Represents domain entities.
-
-**Trail**
-- trailId  
-- name  
-- region  
-- difficulty  
-- hikeCount  
+## ✨ Key Features
+🌲 Add and manage trail records  
+📍 Search trails by region  
+📊 Group by difficulty  
+🏆 Find most-hiked trails  
+📈 Region-wise hike counts  
+🧮 Difficulty statistics  
+🧪 Unit tested with JUnit 5  
 
 ---
 
-### 4.2 Service / Utility Layer
-Contains all computation and business rules.
+## 🧱 Core Components
 
-**TrailUtil**
-- Add and manage records  
-- Perform aggregations  
-- Apply filters  
-- Produce rankings  
-- Generate statistical summaries  
-
----
-
-### 4.3 Presentation Layer
-Handles user interaction through console input/output.
-
-**UserInterface**
-- Accepts data  
-- Calls service methods  
-- Displays formatted results  
+| Class | Purpose |
+|------|---------|
+| `Trail` | Model class representing a trail |
+| `TrailUtil` | Business logic & analytics |
+| `UserInterface` | Console execution layer |
+| `TrailUtilTest` | Unit tests |
 
 ---
 
-## 5. Functional Scope
-
-### Data Management
-- Add trails
-- Search by ID
-- Modify hike counts
-
-### Analytics
-- Most visited trails
-- Region-wise totals
-- Difficulty grouping
-- Top-N per region
-- Summary metrics (count / total / average)
-
-### Querying
-- Filter by region
-- Filter by difficulty
-- Combined filtering
+## 🛠️ Tech Stack
+- ☕ Java  
+- 📦 Maven  
+- 🧪 JUnit 5  
+- 📉 SonarQube Community Edition  
+- 💻 VS Code  
 
 ---
 
-## 6. Non-Functional Focus
+## 📁 Project Structure
 
-The project emphasizes:
-
-- Code readability  
-- Separation of concerns  
-- Testability  
-- Maintainability  
-- Continuous quality inspection  
-
----
-
-## 7. Tools & Technologies
-
-| Category | Tool |
-|---------|------|
-| Language | Java |
-| Build | Maven |
-| Testing | JUnit 5 |
-| Quality | SonarQube |
-| IDE | VS Code / IntelliJ |
-
----
-
-## 8. Testing Strategy
-
-Unit tests validate individual service methods.
-
-### Coverage Areas
-- Insert operations  
-- Retrieval accuracy  
-- Aggregation correctness  
-- Sorting and ranking  
-- Update behavior  
-- Boundary scenarios  
-
-The goal is to prevent regression while improving the code.
+```
+ecotrail
+│
+├── src
+│   ├── main
+│   │   └── java
+│   │       ├── Trail.java
+│   │       ├── TrailUtil.java
+│   │       └── UserInterface.java
+│   │
+│   └── test
+│       └── java
+│           └── TrailUtilTest.java
+│
+├── screenshots
+│   ├── dashboard.png
+│   └── coverage.png
+│
+└── pom.xml
+```
 
 ---
 
-## 9. Static Code Analysis
+## ⚙️ How to Run
 
-SonarQube is integrated to provide automatic feedback on:
+### ▶️ Run Application
 
-- Bugs  
-- Vulnerabilities  
-- Code smells  
-- Duplication  
-- Maintainability rating  
-- Test coverage percentage  
+```
+mvn compile
+mvn exec:java
 
-Developers use these insights to refactor and improve quality.
+```
 
 ---
 
-## 10. Execution Workflow
 
-1. Implement logic  
-2. Verify via console  
-3. Write unit tests  
-4. Build with Maven  
-5. Run Sonar analysis  
-6. Review dashboard  
-7. Refactor  
-8. Repeat  
+### 🧪 Run Tests
 
----
+```
+mvn clean test
 
-## 11. Output & Reporting
+```
 
-After successful execution, the system can produce:
+### 📊 SonarQube Analysis
 
-- Ranked trail lists  
-- Aggregated region totals  
-- Difficulty-based reports  
-- Statistical summaries  
+```
+mvn sonar:sonar -Dsonar.login=YOUR_TOKEN
 
-SonarQube provides visual dashboards for quality metrics.
+```
+
+Server URL:
+
+```
+http://localhost:9000
+```
 
 ---
 
-## 12. Limitations
+## 📷 SonarQube Results
 
-- Uses in-memory storage (no database)  
-- Console-based interface  
-- No authentication or user roles  
-
----
-
-## 13. Future Improvements
-
-Potential enhancements include:
-
-- REST API integration  
-- Persistent storage  
-- Web or mobile UI  
-- Role-based access  
-- Automated CI/CD pipelines  
-- Advanced trend analytics  
+### 🧾 Quality Gate & Dashboard
+![Dashboard](screenshots/dashboard.png)
 
 ---
 
-## 14. Learning Outcome
-
-Through this project, the following competencies are developed:
-
-- Strong understanding of Java collections  
-- Writing testable service methods  
-- Using automated testing frameworks  
-- Applying static analysis tools  
-- Improving software maintainability  
+### 📊 Code Coverage
+![Coverage](screenshots/codecoverage.png)
 
 ---
 
-## 15. Conclusion
-
-EcoTrail demonstrates how structured programming, automated testing, and continuous inspection can work together to produce reliable and maintainable software.
-
-It acts as a foundational model for how enterprise applications evolve from simple logic to quality-driven systems.
+## 🧠 What This Project Demonstrates
+✅ Practical usage of Java Collections  
+✅ Stream & aggregation operations  
+✅ Clean modular design  
+✅ Automated testing  
+✅ Static code quality inspection  
+✅ Maintainability awareness  
 
 ---
+
+## 🎯 Outcome
+The project successfully passed the SonarQube Quality Gate ✔️  
+with strong reliability and maintainability metrics.
+
+---
+
