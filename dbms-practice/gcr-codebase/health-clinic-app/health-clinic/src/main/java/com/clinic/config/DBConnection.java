@@ -9,7 +9,7 @@ public class DBConnection {
             "jdbc:mysql://localhost:3306/healthclinicdb?allowPublicKeyRetrieval=true&useSSL=false";
 
     private static final String USER = "root";
-    private static final String PASSWORD = "Shruti@2901";
+    private static final String PASSWORD = "yourpassword";
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
