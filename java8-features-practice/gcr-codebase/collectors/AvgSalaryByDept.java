@@ -33,6 +33,7 @@ public class AvgSalaryByDept {
 
         Map<String, Double> avgSalaryByDept =
                 employees.stream()
+                        .filter(emp -> emp.getSalary() > 6000) 
                         .collect(Collectors.groupingBy(
                                 Employee::getDepartment,
                                 Collectors.averagingDouble(Employee::getSalary)
