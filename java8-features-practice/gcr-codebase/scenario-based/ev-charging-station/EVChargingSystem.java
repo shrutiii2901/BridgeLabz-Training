@@ -1,4 +1,7 @@
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Queue;
 
 public class EVChargingSystem {
 
@@ -62,7 +65,7 @@ public class EVChargingSystem {
         }
 
        
-        queue.add(vehicle);
+    queue.add(vehicle);
         throw new NoChargingSlotAvailableException(
                 "No slot available. Vehicle added to waiting queue: "
                         + vehicle.getVehicleNumber());
