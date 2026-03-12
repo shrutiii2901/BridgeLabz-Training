@@ -1,6 +1,4 @@
 
-
-
 public class FlightUtil {
 
     public boolean validateFlightNumber(String flightNumber) throws InvalidFlightException {
