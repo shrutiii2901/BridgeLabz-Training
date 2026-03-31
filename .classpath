@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+	<classpathentry kind="src" path="oops-practice/scenario-based"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="core-java-program/gcr-codebase/programming-elements"/>
-	<classpathentry kind="src" path="core-java-program/leet-code-codebase"/>
-	<classpathentry kind="src" path="core-java-program/gcr-codebase/control-flow"/>
-	<classpathentry kind="src" path="core-java-program/gcr-codebase/arrays"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
