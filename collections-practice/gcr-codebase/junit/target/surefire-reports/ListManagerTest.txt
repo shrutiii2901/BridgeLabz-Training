@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: ListManagerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.033 s <<< FAILURE! - in ListManagerTest
+initializationError(ListManagerTest)  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.Exception: Method testAddRemoveAndSize() should be public
+
