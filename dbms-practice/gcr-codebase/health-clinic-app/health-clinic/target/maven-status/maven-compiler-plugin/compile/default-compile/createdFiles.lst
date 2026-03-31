@@ -1,0 +1,16 @@
+com\clinic\dao\AppointmentManager.class
+com\clinic\ui\Main.class
+com\clinic\model\Prescription.class
+com\clinic\config\DBConnection.class
+com\clinic\model\Patient.class
+com\clinic\model\Doctor.class
+com\clinic\dao\VisitManager.class
+com\clinic\model\Specialty.class
+com\clinic\model\PaymentTransaction.class
+com\clinic\model\Bill.class
+com\clinic\dao\AdminManager.class
+com\clinic\dao\BillingManager.class
+com\clinic\model\Appointment.class
+com\clinic\dao\DoctorManager.class
+com\clinic\dao\PatientDAO.class
+com\clinic\model\Visit.class
