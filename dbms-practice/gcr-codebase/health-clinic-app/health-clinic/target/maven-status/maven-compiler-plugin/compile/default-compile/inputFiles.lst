@@ -1,0 +1,16 @@
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\config\DBConnection.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\dao\AdminManager.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\dao\AppointmentManager.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\dao\BillingManager.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\dao\DoctorManager.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\dao\PatientDAO.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\dao\VisitManager.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\model\Appointment.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\model\Bill.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\model\Doctor.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\model\Patient.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\model\PaymentTransaction.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\model\Prescription.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\model\Specialty.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\model\Visit.java
+C:\BridgeLabz-Training\BridgeLabz-Training\dbms-practice\gcr-codebase\health-clinic-app\health-clinic\src\main\java\com\clinic\ui\Main.java
